@@ -1,0 +1,1631 @@
+Command: /home/dhruv/.espressif/python_env/idf6.1_py3.14_env/bin/python /home/dhruv/softwares/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/dhruv/softwares/esp-idf/examples/esp_driver_design/blink_driver/build/blink_driver.elf /home/dhruv/softwares/esp-idf/examples/esp_driver_design/blink_driver/build/bootloader/bootloader.elf -m '/home/dhruv/.espressif/python_env/idf6.1_py3.14_env/bin/python' '/home/dhruv/softwares/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15820
+load:0x40080400,len:3988
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.1-dev-4811-gfce70533fa 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 26 2026 14:22:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=07344h ( 29508) map[0m
+[0;32mI (98) esp_image: segment 1: paddr=0001736c vaddr=3ffb0000 size=0285ch ( 10332) load[0m
+[0;32mI (103) esp_image: segment 2: paddr=00019bd0 vaddr=40080000 size=06448h ( 25672) load[0m
+[0;32mI (113) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0bce0h ( 48352) map[0m
+[0;32mI (131) esp_image: segment 4: paddr=0002bd08 vaddr=40086448 size=03fe4h ( 16356) load[0m
+[0;32mI (138) esp_image: segment 5: paddr=0002fcf4 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (144) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (144) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Multicore app[0m
+[0;32mI (165) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (165) cpu_start: Pro cpu start user code[0m
+[0;32mI (165) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (167) app_init: Application information:[0m
+[0;32mI (171) app_init: Project name:     blink_driver[0m
+[0;32mI (175) app_init: App version:      v6.1-dev-4811-gfce70533fa[0m
+[0;32mI (181) app_init: Compile time:     May 26 2026 14:22:48[0m
+[0;32mI (186) app_init: ELF file SHA256:  e589da4f2...[0m
+[0;32mI (190) app_init: ESP-IDF:          v6.1-dev-4811-gfce70533fa[0m
+[0;32mI (195) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (199) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (203) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (207) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (213) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (218) heap_init: At 3FFB31A0 len 0002CE60 (179 KiB): DRAM[0m
+[0;32mI (224) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (229) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (235) heap_init: At 4008A42C len 00015BD4 (86 KiB): IRAM[0m
+[0;32mI (241) spi_flash: detected chip: generic[0m
+[0;32mI (244) spi_flash: flash io: dio[0m
+[0;33mW (246) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (260) main_task: Started on CPU0[0m
+[0;32mI (260) main_task: Calling app_main()[0m
+[0;32mI (260) blynk_led_driver: configured to blink GPIO LED![0m
+[0;32mI (270) blynk_led_driver: configured to read GPIO Button![0m
+[0;32mI (270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (270) blynk_led_driver: button_released![0m
+
+[0;32mI (280) main_task: Returned from app_main()[0m
+[0;32mI (380) blynk_led_driver: button_released![0m
+
+[0;32mI (480) blynk_led_driver: button_released![0m
+
+[0;32mI (580) blynk_led_driver: button_released![0m
+
+[0;32mI (680) blynk_led_driver: button_released![0m
+
+[0;32mI (780) blynk_led_driver: button_released![0m
+
+[0;32mI (880) blynk_led_driver: button_released![0m
+
+[0;32mI (980) blynk_led_driver: button_released![0m
+
+[0;32mI (1080) blynk_led_driver: button_released![0m
+
+[0;32mI (1180) blynk_led_driver: button_released![0m
+
+[0;32mI (1270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (1280) blynk_led_driver: button_released![0m
+
+[0;32mI (1380) blynk_led_driver: button_released![0m
+
+[0;32mI (1480) blynk_led_driver: button_released![0m
+
+[0;32mI (1580) blynk_led_driver: button_released![0m
+
+[0;32mI (1680) blynk_led_driver: button_released![0m
+
+[0;32mI (1780) blynk_led_driver: button_released![0m
+
+[0;32mI (1880) blynk_led_driver: button_released![0m
+
+[0;32mI (1980) blynk_led_driver: button_released![0m
+
+[0;32mI (2080) blynk_led_driver: button_released![0m
+
+[0;32mI (2180) blynk_led_driver: button_released![0m
+
+[0;32mI (2270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (2280) blynk_led_driver: button_released![0m
+
+[0;32mI (2380) blynk_led_driver: button_released![0m
+
+[0;32mI (2480) blynk_led_driver: button_released![0m
+
+[0;32mI (2580) blynk_led_driver: button_released![0m
+
+[0;32mI (2680) blynk_led_driver: button_released![0m
+
+[0;32mI (2780) blynk_led_driver: button_released![0m
+
+[0;32mI (2880) blynk_led_driver: button_released![0m
+
+[0;32mI (2980) blynk_led_driver: button_released![0m
+
+[0;32mI (3080) blynk_led_driver: button_released![0m
+
+[0;32mI (3180) blynk_led_driver: button_released![0m
+
+[0;32mI (3270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (3280) blynk_led_driver: button_released![0m
+
+[0;32mI (3380) blynk_led_driver: button_released![0m
+
+[0;32mI (3480) blynk_led_driver: button_released![0m
+
+[0;32mI (3580) blynk_led_driver: button_released![0m
+
+[0;32mI (3680) blynk_led_driver: button_released![0m
+
+[0;32mI (3780) blynk_led_driver: button_released![0m
+
+[0;32mI (3880) blynk_led_driver: button_released![0m
+
+[0;32mI (3980) blynk_led_driver: button_released![0m
+
+[0;32mI (4080) blynk_led_driver: button_released![0m
+
+[0;32mI (4180) blynk_led_driver: button_released![0m
+
+[0;32mI (4270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (4280) blynk_led_driver: button_released![0m
+
+[0;32mI (4380) blynk_led_driver: button_released![0m
+
+[0;32mI (4480) blynk_led_driver: button_released![0m
+
+[0;32mI (4580) blynk_led_driver: button_released![0m
+
+[0;32mI (4680) blynk_led_driver: button_released![0m
+
+[0;32mI (4780) blynk_led_driver: button_released![0m
+
+[0;32mI (4880) blynk_led_driver: button_released![0m
+
+[0;32mI (4980) blynk_led_driver: button_released![0m
+
+[0;32mI (5080) blynk_led_driver: button_released![0m
+
+[0;32mI (5180) blynk_led_driver: button_released![0m
+
+[0;32mI (5270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (5280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (5980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (6280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (6980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (7280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (7980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (8280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (8980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (9280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (9980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (10280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (10980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (11280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (11980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (12280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (12980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (13280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (13980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (14280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (14980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (15280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15380) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15480) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15580) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15680) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15780) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15880) blynk_led_driver: button_pressed![0m
+
+[0;32mI (15980) blynk_led_driver: button_pressed![0m
+
+[0;32mI (16080) blynk_led_driver: button_pressed![0m
+
+[0;32mI (16180) blynk_led_driver: button_pressed![0m
+
+[0;32mI (16270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (16280) blynk_led_driver: button_pressed![0m
+
+[0;32mI (16380) blynk_led_driver: button_released![0m
+
+[0;32mI (16480) blynk_led_driver: button_released![0m
+
+[0;32mI (16580) blynk_led_driver: button_released![0m
+
+[0;32mI (16680) blynk_led_driver: button_released![0m
+
+[0;32mI (16780) blynk_led_driver: button_released![0m
+
+[0;32mI (16880) blynk_led_driver: button_released![0m
+
+[0;32mI (16980) blynk_led_driver: button_released![0m
+
+[0;32mI (17080) blynk_led_driver: button_released![0m
+
+[0;32mI (17180) blynk_led_driver: button_released![0m
+
+[0;32mI (17270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (17280) blynk_led_driver: button_released![0m
+
+[0;32mI (17380) blynk_led_driver: button_released![0m
+
+[0;32mI (17480) blynk_led_driver: button_released![0m
+
+[0;32mI (17580) blynk_led_driver: button_released![0m
+
+[0;32mI (17680) blynk_led_driver: button_released![0m
+
+[0;32mI (17780) blynk_led_driver: button_released![0m
+
+[0;32mI (17880) blynk_led_driver: button_released![0m
+
+[0;32mI (17980) blynk_led_driver: button_released![0m
+
+[0;32mI (18080) blynk_led_driver: button_released![0m
+
+[0;32mI (18180) blynk_led_driver: button_released![0m
+
+[0;32mI (18270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (18280) blynk_led_driver: button_released![0m
+
+[0;32mI (18380) blynk_led_driver: button_released![0m
+
+[0;32mI (18480) blynk_led_driver: button_released![0m
+
+[0;32mI (18580) blynk_led_driver: button_released![0m
+
+[0;32mI (18680) blynk_led_driver: button_released![0m
+
+[0;32mI (18780) blynk_led_driver: button_released![0m
+
+[0;32mI (18880) blynk_led_driver: button_released![0m
+
+[0;32mI (18980) blynk_led_driver: button_released![0m
+
+[0;32mI (19080) blynk_led_driver: button_released![0m
+
+[0;32mI (19180) blynk_led_driver: button_released![0m
+
+[0;32mI (19270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (19280) blynk_led_driver: button_released![0m
+
+[0;32mI (19380) blynk_led_driver: button_released![0m
+
+[0;32mI (19480) blynk_led_driver: button_released![0m
+
+[0;32mI (19580) blynk_led_driver: button_released![0m
+
+[0;32mI (19680) blynk_led_driver: button_released![0m
+
+[0;32mI (19780) blynk_led_driver: button_released![0m
+
+[0;32mI (19880) blynk_led_driver: button_released![0m
+
+[0;32mI (19980) blynk_led_driver: button_released![0m
+
+[0;32mI (20080) blynk_led_driver: button_released![0m
+
+[0;32mI (20180) blynk_led_driver: button_released![0m
+
+[0;32mI (20270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (20280) blynk_led_driver: button_released![0m
+
+[0;32mI (20380) blynk_led_driver: button_released![0m
+
+[0;32mI (20480) blynk_led_driver: button_released![0m
+
+[0;32mI (20580) blynk_led_driver: button_released![0m
+
+[0;32mI (20680) blynk_led_driver: button_released![0m
+
+[0;32mI (20780) blynk_led_driver: button_released![0m
+
+[0;32mI (20880) blynk_led_driver: button_released![0m
+
+[0;32mI (20980) blynk_led_driver: button_released![0m
+
+[0;32mI (21080) blynk_led_driver: button_released![0m
+
+[0;32mI (21180) blynk_led_driver: button_released![0m
+
+[0;32mI (21270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (21280) blynk_led_driver: button_released![0m
+
+[0;32mI (21380) blynk_led_driver: button_released![0m
+
+[0;32mI (21480) blynk_led_driver: button_released![0m
+
+[0;32mI (21580) blynk_led_driver: button_released![0m
+
+[0;32mI (21680) blynk_led_driver: button_released![0m
+
+[0;32mI (21780) blynk_led_driver: button_released![0m
+
+[0;32mI (21880) blynk_led_driver: button_released![0m
+
+[0;32mI (21980) blynk_led_driver: button_released![0m
+
+[0;32mI (22080) blynk_led_driver: button_released![0m
+
+[0;32mI (22180) blynk_led_driver: button_released![0m
+
+[0;32mI (22270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (22280) blynk_led_driver: button_released![0m
+
+[0;32mI (22380) blynk_led_driver: button_released![0m
+
+[0;32mI (22480) blynk_led_driver: button_released![0m
+
+[0;32mI (22580) blynk_led_driver: button_released![0m
+
+[0;32mI (22680) blynk_led_driver: button_released![0m
+
+[0;32mI (22780) blynk_led_driver: button_released![0m
+
+[0;32mI (22880) blynk_led_driver: button_released![0m
+
+[0;32mI (22980) blynk_led_driver: button_released![0m
+
+[0;32mI (23080) blynk_led_driver: button_released![0m
+
+[0;32mI (23180) blynk_led_driver: button_released![0m
+
+[0;32mI (23270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (23280) blynk_led_driver: button_released![0m
+
+[0;32mI (23380) blynk_led_driver: button_released![0m
+
+[0;32mI (23480) blynk_led_driver: button_released![0m
+
+[0;32mI (23580) blynk_led_driver: button_released![0m
+
+[0;32mI (23680) blynk_led_driver: button_released![0m
+
+[0;32mI (23780) blynk_led_driver: button_released![0m
+
+[0;32mI (23880) blynk_led_driver: button_released![0m
+
+[0;32mI (23980) blynk_led_driver: button_released![0m
+
+[0;32mI (24080) blynk_led_driver: button_released![0m
+
+[0;32mI (24180) blynk_led_driver: button_released![0m
+
+[0;32mI (24270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (24280) blynk_led_driver: button_released![0m
+
+[0;32mI (24380) blynk_led_driver: button_released![0m
+
+[0;32mI (24480) blynk_led_driver: button_released![0m
+
+[0;32mI (24580) blynk_led_driver: button_released![0m
+
+[0;32mI (24680) blynk_led_driver: button_released![0m
+
+[0;32mI (24780) blynk_led_driver: button_released![0m
+
+[0;32mI (24880) blynk_led_driver: button_released![0m
+
+[0;32mI (24980) blynk_led_driver: button_released![0m
+
+[0;32mI (25080) blynk_led_driver: button_released![0m
+
+[0;32mI (25180) blynk_led_driver: button_released![0m
+
+[0;32mI (25270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (25280) blynk_led_driver: button_released![0m
+
+[0;32mI (25380) blynk_led_driver: button_released![0m
+
+[0;32mI (25480) blynk_led_driver: button_released![0m
+
+[0;32mI (25580) blynk_led_driver: button_released![0m
+
+[0;32mI (25680) blynk_led_driver: button_released![0m
+
+[0;32mI (25780) blynk_led_driver: button_released![0m
+
+[0;32mI (25880) blynk_led_driver: button_released![0m
+
+[0;32mI (25980) blynk_led_driver: button_released![0m
+
+[0;32mI (26080) blynk_led_driver: button_released![0m
+
+[0;32mI (26180) blynk_led_driver: button_released![0m
+
+[0;32mI (26270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (26280) blynk_led_driver: button_released![0m
+
+[0;32mI (26380) blynk_led_driver: button_released![0m
+
+[0;32mI (26480) blynk_led_driver: button_released![0m
+
+[0;32mI (26580) blynk_led_driver: button_released![0m
+
+[0;32mI (26680) blynk_led_driver: button_released![0m
+
+[0;32mI (26780) blynk_led_driver: button_released![0m
+
+[0;32mI (26880) blynk_led_driver: button_released![0m
+
+[0;32mI (26980) blynk_led_driver: button_released![0m
+
+[0;32mI (27080) blynk_led_driver: button_released![0m
+
+[0;32mI (27180) blynk_led_driver: button_released![0m
+
+[0;32mI (27270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (27280) blynk_led_driver: button_released![0m
+
+[0;32mI (27380) blynk_led_driver: button_released![0m
+
+[0;32mI (27480) blynk_led_driver: button_released![0m
+
+[0;32mI (27580) blynk_led_driver: button_released![0m
+
+[0;32mI (27680) blynk_led_driver: button_released![0m
+
+[0;32mI (27780) blynk_led_driver: button_released![0m
+
+[0;32mI (27880) blynk_led_driver: button_released![0m
+
+[0;32mI (27980) blynk_led_driver: button_released![0m
+
+[0;32mI (28080) blynk_led_driver: button_released![0m
+
+[0;32mI (28180) blynk_led_driver: button_released![0m
+
+[0;32mI (28270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (28280) blynk_led_driver: button_released![0m
+
+[0;32mI (28380) blynk_led_driver: button_released![0m
+
+[0;32mI (28480) blynk_led_driver: button_released![0m
+
+[0;32mI (28580) blynk_led_driver: button_released![0m
+
+[0;32mI (28680) blynk_led_driver: button_released![0m
+
+[0;32mI (28780) blynk_led_driver: button_released![0m
+
+[0;32mI (28880) blynk_led_driver: button_released![0m
+
+[0;32mI (28980) blynk_led_driver: button_released![0m
+
+[0;32mI (29080) blynk_led_driver: button_released![0m
+
+[0;32mI (29180) blynk_led_driver: button_released![0m
+
+[0;32mI (29270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (29280) blynk_led_driver: button_released![0m
+
+[0;32mI (29380) blynk_led_driver: button_released![0m
+
+[0;32mI (29480) blynk_led_driver: button_released![0m
+
+[0;32mI (29580) blynk_led_driver: button_released![0m
+
+[0;32mI (29680) blynk_led_driver: button_released![0m
+
+[0;32mI (29780) blynk_led_driver: button_released![0m
+
+[0;32mI (29880) blynk_led_driver: button_released![0m
+
+[0;32mI (29980) blynk_led_driver: button_released![0m
+
+[0;32mI (30080) blynk_led_driver: button_released![0m
+
+[0;32mI (30180) blynk_led_driver: button_released![0m
+
+[0;32mI (30270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (30280) blynk_led_driver: button_released![0m
+
+[0;32mI (30380) blynk_led_driver: button_released![0m
+
+[0;32mI (30480) blynk_led_driver: button_released![0m
+
+[0;32mI (30580) blynk_led_driver: button_released![0m
+
+[0;32mI (30680) blynk_led_driver: button_released![0m
+
+[0;32mI (30780) blynk_led_driver: button_released![0m
+
+[0;32mI (30880) blynk_led_driver: button_released![0m
+
+[0;32mI (30980) blynk_led_driver: button_released![0m
+
+[0;32mI (31080) blynk_led_driver: button_released![0m
+
+[0;32mI (31180) blynk_led_driver: button_released![0m
+
+[0;32mI (31270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (31280) blynk_led_driver: button_released![0m
+
+[0;32mI (31380) blynk_led_driver: button_released![0m
+
+[0;32mI (31480) blynk_led_driver: button_released![0m
+
+[0;32mI (31580) blynk_led_driver: button_released![0m
+
+[0;32mI (31680) blynk_led_driver: button_released![0m
+
+[0;32mI (31780) blynk_led_driver: button_released![0m
+
+[0;32mI (31880) blynk_led_driver: button_released![0m
+
+[0;32mI (31980) blynk_led_driver: button_released![0m
+
+[0;32mI (32080) blynk_led_driver: button_released![0m
+
+[0;32mI (32180) blynk_led_driver: button_released![0m
+
+[0;32mI (32270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (32280) blynk_led_driver: button_released![0m
+
+[0;32mI (32380) blynk_led_driver: button_released![0m
+
+[0;32mI (32480) blynk_led_driver: button_released![0m
+
+[0;32mI (32580) blynk_led_driver: button_released![0m
+
+[0;32mI (32680) blynk_led_driver: button_released![0m
+
+[0;32mI (32780) blynk_led_driver: button_released![0m
+
+[0;32mI (32880) blynk_led_driver: button_released![0m
+
+[0;32mI (32980) blynk_led_driver: button_released![0m
+
+[0;32mI (33080) blynk_led_driver: button_released![0m
+
+[0;32mI (33180) blynk_led_driver: button_released![0m
+
+[0;32mI (33270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (33280) blynk_led_driver: button_released![0m
+
+[0;32mI (33380) blynk_led_driver: button_released![0m
+
+[0;32mI (33480) blynk_led_driver: button_released![0m
+
+[0;32mI (33580) blynk_led_driver: button_released![0m
+
+[0;32mI (33680) blynk_led_driver: button_released![0m
+
+[0;32mI (33780) blynk_led_driver: button_released![0m
+
+[0;32mI (33880) blynk_led_driver: button_released![0m
+
+[0;32mI (33980) blynk_led_driver: button_released![0m
+
+[0;32mI (34080) blynk_led_driver: button_released![0m
+
+[0;32mI (34180) blynk_led_driver: button_released![0m
+
+[0;32mI (34270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (34280) blynk_led_driver: button_released![0m
+
+[0;32mI (34380) blynk_led_driver: button_released![0m
+
+[0;32mI (34480) blynk_led_driver: button_released![0m
+
+[0;32mI (34580) blynk_led_driver: button_released![0m
+
+[0;32mI (34680) blynk_led_driver: button_released![0m
+
+[0;32mI (34780) blynk_led_driver: button_released![0m
+
+[0;32mI (34880) blynk_led_driver: button_released![0m
+
+[0;32mI (34980) blynk_led_driver: button_released![0m
+
+[0;32mI (35080) blynk_led_driver: button_released![0m
+
+[0;32mI (35180) blynk_led_driver: button_released![0m
+
+[0;32mI (35270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (35280) blynk_led_driver: button_released![0m
+
+[0;32mI (35380) blynk_led_driver: button_released![0m
+
+[0;32mI (35480) blynk_led_driver: button_released![0m
+
+[0;32mI (35580) blynk_led_driver: button_released![0m
+
+[0;32mI (35680) blynk_led_driver: button_released![0m
+
+[0;32mI (35780) blynk_led_driver: button_released![0m
+
+[0;32mI (35880) blynk_led_driver: button_released![0m
+
+[0;32mI (35980) blynk_led_driver: button_released![0m
+
+[0;32mI (36080) blynk_led_driver: button_released![0m
+
+[0;32mI (36180) blynk_led_driver: button_released![0m
+
+[0;32mI (36270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (36280) blynk_led_driver: button_released![0m
+
+[0;32mI (36380) blynk_led_driver: button_released![0m
+
+[0;32mI (36480) blynk_led_driver: button_released![0m
+
+[0;32mI (36580) blynk_led_driver: button_released![0m
+
+[0;32mI (36680) blynk_led_driver: button_released![0m
+
+[0;32mI (36780) blynk_led_driver: button_released![0m
+
+[0;32mI (36880) blynk_led_driver: button_released![0m
+
+[0;32mI (36980) blynk_led_driver: button_released![0m
+
+[0;32mI (37080) blynk_led_driver: button_released![0m
+
+[0;32mI (37180) blynk_led_driver: button_released![0m
+
+[0;32mI (37270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (37280) blynk_led_driver: button_released![0m
+
+[0;32mI (37380) blynk_led_driver: button_released![0m
+
+[0;32mI (37480) blynk_led_driver: button_released![0m
+
+[0;32mI (37580) blynk_led_driver: button_released![0m
+
+[0;32mI (37680) blynk_led_driver: button_released![0m
+
+[0;32mI (37780) blynk_led_driver: button_released![0m
+
+[0;32mI (37880) blynk_led_driver: button_released![0m
+
+[0;32mI (37980) blynk_led_driver: button_released![0m
+
+[0;32mI (38080) blynk_led_driver: button_released![0m
+
+[0;32mI (38180) blynk_led_driver: button_released![0m
+
+[0;32mI (38270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (38280) blynk_led_driver: button_released![0m
+
+[0;32mI (38380) blynk_led_driver: button_released![0m
+
+[0;32mI (38480) blynk_led_driver: button_released![0m
+
+[0;32mI (38580) blynk_led_driver: button_released![0m
+
+[0;32mI (38680) blynk_led_driver: button_released![0m
+
+[0;32mI (38780) blynk_led_driver: button_released![0m
+
+[0;32mI (38880) blynk_led_driver: button_released![0m
+
+[0;32mI (38980) blynk_led_driver: button_released![0m
+
+[0;32mI (39080) blynk_led_driver: button_released![0m
+
+[0;32mI (39180) blynk_led_driver: button_released![0m
+
+[0;32mI (39270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (39280) blynk_led_driver: button_released![0m
+
+[0;32mI (39380) blynk_led_driver: button_released![0m
+
+[0;32mI (39480) blynk_led_driver: button_released![0m
+
+[0;32mI (39580) blynk_led_driver: button_released![0m
+
+[0;32mI (39680) blynk_led_driver: button_released![0m
+
+[0;32mI (39780) blynk_led_driver: button_released![0m
+
+[0;32mI (39880) blynk_led_driver: button_released![0m
+
+[0;32mI (39980) blynk_led_driver: button_released![0m
+
+[0;32mI (40080) blynk_led_driver: button_released![0m
+
+[0;32mI (40180) blynk_led_driver: button_released![0m
+
+[0;32mI (40270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (40280) blynk_led_driver: button_released![0m
+
+[0;32mI (40380) blynk_led_driver: button_released![0m
+
+[0;32mI (40480) blynk_led_driver: button_released![0m
+
+[0;32mI (40580) blynk_led_driver: button_released![0m
+
+[0;32mI (40680) blynk_led_driver: button_released![0m
+
+[0;32mI (40780) blynk_led_driver: button_released![0m
+
+[0;32mI (40880) blynk_led_driver: button_released![0m
+
+[0;32mI (40980) blynk_led_driver: button_released![0m
+
+[0;32mI (41080) blynk_led_driver: button_released![0m
+
+[0;32mI (41180) blynk_led_driver: button_released![0m
+
+[0;32mI (41270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (41280) blynk_led_driver: button_released![0m
+
+[0;32mI (41380) blynk_led_driver: button_released![0m
+
+[0;32mI (41480) blynk_led_driver: button_released![0m
+
+[0;32mI (41580) blynk_led_driver: button_released![0m
+
+[0;32mI (41680) blynk_led_driver: button_released![0m
+
+[0;32mI (41780) blynk_led_driver: button_released![0m
+
+[0;32mI (41880) blynk_led_driver: button_released![0m
+
+[0;32mI (41980) blynk_led_driver: button_released![0m
+
+[0;32mI (42080) blynk_led_driver: button_released![0m
+
+[0;32mI (42180) blynk_led_driver: button_released![0m
+
+[0;32mI (42270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (42280) blynk_led_driver: button_released![0m
+
+[0;32mI (42380) blynk_led_driver: button_released![0m
+
+[0;32mI (42480) blynk_led_driver: button_released![0m
+
+[0;32mI (42580) blynk_led_driver: button_released![0m
+
+[0;32mI (42680) blynk_led_driver: button_released![0m
+
+[0;32mI (42780) blynk_led_driver: button_released![0m
+
+[0;32mI (42880) blynk_led_driver: button_released![0m
+
+[0;32mI (42980) blynk_led_driver: button_released![0m
+
+[0;32mI (43080) blynk_led_driver: button_released![0m
+
+[0;32mI (43180) blynk_led_driver: button_released![0m
+
+[0;32mI (43270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (43280) blynk_led_driver: button_released![0m
+
+[0;32mI (43380) blynk_led_driver: button_released![0m
+
+[0;32mI (43480) blynk_led_driver: button_released![0m
+
+[0;32mI (43580) blynk_led_driver: button_released![0m
+
+[0;32mI (43680) blynk_led_driver: button_released![0m
+
+[0;32mI (43780) blynk_led_driver: button_released![0m
+
+[0;32mI (43880) blynk_led_driver: button_released![0m
+
+[0;32mI (43980) blynk_led_driver: button_released![0m
+
+[0;32mI (44080) blynk_led_driver: button_released![0m
+
+[0;32mI (44180) blynk_led_driver: button_released![0m
+
+[0;32mI (44270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (44280) blynk_led_driver: button_released![0m
+
+[0;32mI (44380) blynk_led_driver: button_released![0m
+
+[0;32mI (44480) blynk_led_driver: button_released![0m
+
+[0;32mI (44580) blynk_led_driver: button_released![0m
+
+[0;32mI (44680) blynk_led_driver: button_released![0m
+
+[0;32mI (44780) blynk_led_driver: button_released![0m
+
+[0;32mI (44880) blynk_led_driver: button_released![0m
+
+[0;32mI (44980) blynk_led_driver: button_released![0m
+
+[0;32mI (45080) blynk_led_driver: button_released![0m
+
+[0;32mI (45180) blynk_led_driver: button_released![0m
+
+[0;32mI (45270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (45280) blynk_led_driver: button_released![0m
+
+[0;32mI (45380) blynk_led_driver: button_released![0m
+
+[0;32mI (45480) blynk_led_driver: button_released![0m
+
+[0;32mI (45580) blynk_led_driver: button_released![0m
+
+[0;32mI (45680) blynk_led_driver: button_released![0m
+
+[0;32mI (45780) blynk_led_driver: button_released![0m
+
+[0;32mI (45880) blynk_led_driver: button_released![0m
+
+[0;32mI (45980) blynk_led_driver: button_released![0m
+
+[0;32mI (46080) blynk_led_driver: button_released![0m
+
+[0;32mI (46180) blynk_led_driver: button_released![0m
+
+[0;32mI (46270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (46280) blynk_led_driver: button_released![0m
+
+[0;32mI (46380) blynk_led_driver: button_released![0m
+
+[0;32mI (46480) blynk_led_driver: button_released![0m
+
+[0;32mI (46580) blynk_led_driver: button_released![0m
+
+[0;32mI (46680) blynk_led_driver: button_released![0m
+
+[0;32mI (46780) blynk_led_driver: button_released![0m
+
+[0;32mI (46880) blynk_led_driver: button_released![0m
+
+[0;32mI (46980) blynk_led_driver: button_released![0m
+
+[0;32mI (47080) blynk_led_driver: button_released![0m
+
+[0;32mI (47180) blynk_led_driver: button_released![0m
+
+[0;32mI (47270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (47280) blynk_led_driver: button_released![0m
+
+[0;32mI (47380) blynk_led_driver: button_released![0m
+
+[0;32mI (47480) blynk_led_driver: button_released![0m
+
+[0;32mI (47580) blynk_led_driver: button_released![0m
+
+[0;32mI (47680) blynk_led_driver: button_released![0m
+
+[0;32mI (47780) blynk_led_driver: button_released![0m
+
+[0;32mI (47880) blynk_led_driver: button_released![0m
+
+[0;32mI (47980) blynk_led_driver: button_released![0m
+
+[0;32mI (48080) blynk_led_driver: button_released![0m
+
+[0;32mI (48180) blynk_led_driver: button_released![0m
+
+[0;32mI (48270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (48280) blynk_led_driver: button_released![0m
+
+[0;32mI (48380) blynk_led_driver: button_released![0m
+
+[0;32mI (48480) blynk_led_driver: button_released![0m
+
+[0;32mI (48580) blynk_led_driver: button_released![0m
+
+[0;32mI (48680) blynk_led_driver: button_released![0m
+
+[0;32mI (48780) blynk_led_driver: button_released![0m
+
+[0;32mI (48880) blynk_led_driver: button_released![0m
+
+[0;32mI (48980) blynk_led_driver: button_released![0m
+
+[0;32mI (49080) blynk_led_driver: button_released![0m
+
+[0;32mI (49180) blynk_led_driver: button_released![0m
+
+[0;32mI (49270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (49280) blynk_led_driver: button_released![0m
+
+[0;32mI (49380) blynk_led_driver: button_released![0m
+
+[0;32mI (49480) blynk_led_driver: button_released![0m
+
+[0;32mI (49580) blynk_led_driver: button_released![0m
+
+[0;32mI (49680) blynk_led_driver: button_released![0m
+
+[0;32mI (49780) blynk_led_driver: button_released![0m
+
+[0;32mI (49880) blynk_led_driver: button_released![0m
+
+[0;32mI (49980) blynk_led_driver: button_released![0m
+
+[0;32mI (50080) blynk_led_driver: button_released![0m
+
+[0;32mI (50180) blynk_led_driver: button_released![0m
+
+[0;32mI (50270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (50280) blynk_led_driver: button_released![0m
+
+[0;32mI (50380) blynk_led_driver: button_released![0m
+
+[0;32mI (50480) blynk_led_driver: button_released![0m
+
+[0;32mI (50580) blynk_led_driver: button_released![0m
+
+[0;32mI (50680) blynk_led_driver: button_released![0m
+
+[0;32mI (50780) blynk_led_driver: button_released![0m
+
+[0;32mI (50880) blynk_led_driver: button_released![0m
+
+[0;32mI (50980) blynk_led_driver: button_released![0m
+
+[0;32mI (51080) blynk_led_driver: button_released![0m
+
+[0;32mI (51180) blynk_led_driver: button_released![0m
+
+[0;32mI (51270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (51280) blynk_led_driver: button_released![0m
+
+[0;32mI (51380) blynk_led_driver: button_released![0m
+
+[0;32mI (51480) blynk_led_driver: button_released![0m
+
+[0;32mI (51580) blynk_led_driver: button_released![0m
+
+[0;32mI (51680) blynk_led_driver: button_released![0m
+
+[0;32mI (51780) blynk_led_driver: button_released![0m
+
+[0;32mI (51880) blynk_led_driver: button_released![0m
+
+[0;32mI (51980) blynk_led_driver: button_released![0m
+
+[0;32mI (52080) blynk_led_driver: button_released![0m
+
+[0;32mI (52180) blynk_led_driver: button_released![0m
+
+[0;32mI (52270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (52280) blynk_led_driver: button_released![0m
+
+[0;32mI (52380) blynk_led_driver: button_released![0m
+
+[0;32mI (52480) blynk_led_driver: button_released![0m
+
+[0;32mI (52580) blynk_led_driver: button_released![0m
+
+[0;32mI (52680) blynk_led_driver: button_released![0m
+
+[0;32mI (52780) blynk_led_driver: button_released![0m
+
+[0;32mI (52880) blynk_led_driver: button_released![0m
+
+[0;32mI (52980) blynk_led_driver: button_released![0m
+
+[0;32mI (53080) blynk_led_driver: button_released![0m
+
+[0;32mI (53180) blynk_led_driver: button_released![0m
+
+[0;32mI (53270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (53280) blynk_led_driver: button_released![0m
+
+[0;32mI (53380) blynk_led_driver: button_released![0m
+
+[0;32mI (53480) blynk_led_driver: button_released![0m
+
+[0;32mI (53580) blynk_led_driver: button_released![0m
+
+[0;32mI (53680) blynk_led_driver: button_released![0m
+
+[0;32mI (53780) blynk_led_driver: button_released![0m
+
+[0;32mI (53880) blynk_led_driver: button_released![0m
+
+[0;32mI (53980) blynk_led_driver: button_released![0m
+
+[0;32mI (54080) blynk_led_driver: button_released![0m
+
+[0;32mI (54180) blynk_led_driver: button_released![0m
+
+[0;32mI (54270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (54280) blynk_led_driver: button_released![0m
+
+[0;32mI (54380) blynk_led_driver: button_released![0m
+
+[0;32mI (54480) blynk_led_driver: button_released![0m
+
+[0;32mI (54580) blynk_led_driver: button_released![0m
+
+[0;32mI (54680) blynk_led_driver: button_released![0m
+
+[0;32mI (54780) blynk_led_driver: button_released![0m
+
+[0;32mI (54880) blynk_led_driver: button_released![0m
+
+[0;32mI (54980) blynk_led_driver: button_released![0m
+
+[0;32mI (55080) blynk_led_driver: button_released![0m
+
+[0;32mI (55180) blynk_led_driver: button_released![0m
+
+[0;32mI (55270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (55280) blynk_led_driver: button_released![0m
+
+[0;32mI (55380) blynk_led_driver: button_released![0m
+
+[0;32mI (55480) blynk_led_driver: button_released![0m
+
+[0;32mI (55580) blynk_led_driver: button_released![0m
+
+[0;32mI (55680) blynk_led_driver: button_released![0m
+
+[0;32mI (55780) blynk_led_driver: button_released![0m
+
+[0;32mI (55880) blynk_led_driver: button_released![0m
+
+[0;32mI (55980) blynk_led_driver: button_released![0m
+
+[0;32mI (56080) blynk_led_driver: button_released![0m
+
+[0;32mI (56180) blynk_led_driver: button_released![0m
+
+[0;32mI (56270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (56280) blynk_led_driver: button_released![0m
+
+[0;32mI (56380) blynk_led_driver: button_released![0m
+
+[0;32mI (56480) blynk_led_driver: button_released![0m
+
+[0;32mI (56580) blynk_led_driver: button_released![0m
+
+[0;32mI (56680) blynk_led_driver: button_released![0m
+
+[0;32mI (56780) blynk_led_driver: button_released![0m
+
+[0;32mI (56880) blynk_led_driver: button_released![0m
+
+[0;32mI (56980) blynk_led_driver: button_released![0m
+
+[0;32mI (57080) blynk_led_driver: button_released![0m
+
+[0;32mI (57180) blynk_led_driver: button_released![0m
+
+[0;32mI (57270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (57280) blynk_led_driver: button_released![0m
+
+[0;32mI (57380) blynk_led_driver: button_released![0m
+
+[0;32mI (57480) blynk_led_driver: button_released![0m
+
+[0;32mI (57580) blynk_led_driver: button_released![0m
+
+[0;32mI (57680) blynk_led_driver: button_released![0m
+
+[0;32mI (57780) blynk_led_driver: button_released![0m
+
+[0;32mI (57880) blynk_led_driver: button_released![0m
+
+[0;32mI (57980) blynk_led_driver: button_released![0m
+
+[0;32mI (58080) blynk_led_driver: button_released![0m
+
+[0;32mI (58180) blynk_led_driver: button_released![0m
+
+[0;32mI (58270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (58280) blynk_led_driver: button_released![0m
+
+[0;32mI (58380) blynk_led_driver: button_released![0m
+
+[0;32mI (58480) blynk_led_driver: button_released![0m
+
+[0;32mI (58580) blynk_led_driver: button_released![0m
+
+[0;32mI (58680) blynk_led_driver: button_released![0m
+
+[0;32mI (58780) blynk_led_driver: button_released![0m
+
+[0;32mI (58880) blynk_led_driver: button_released![0m
+
+[0;32mI (58980) blynk_led_driver: button_released![0m
+
+[0;32mI (59080) blynk_led_driver: button_released![0m
+
+[0;32mI (59180) blynk_led_driver: button_released![0m
+
+[0;32mI (59270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (59280) blynk_led_driver: button_released![0m
+
+[0;32mI (59380) blynk_led_driver: button_released![0m
+
+[0;32mI (59480) blynk_led_driver: button_released![0m
+
+[0;32mI (59580) blynk_led_driver: button_released![0m
+
+[0;32mI (59680) blynk_led_driver: button_released![0m
+
+[0;32mI (59780) blynk_led_driver: button_released![0m
+
+[0;32mI (59880) blynk_led_driver: button_released![0m
+
+[0;32mI (59980) blynk_led_driver: button_released![0m
+
+[0;32mI (60080) blynk_led_driver: button_released![0m
+
+[0;32mI (60180) blynk_led_driver: button_released![0m
+
+[0;32mI (60270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (60280) blynk_led_driver: button_released![0m
+
+[0;32mI (60380) blynk_led_driver: button_released![0m
+
+[0;32mI (60480) blynk_led_driver: button_released![0m
+
+[0;32mI (60580) blynk_led_driver: button_released![0m
+
+[0;32mI (60680) blynk_led_driver: button_released![0m
+
+[0;32mI (60780) blynk_led_driver: button_released![0m
+
+[0;32mI (60880) blynk_led_driver: button_released![0m
+
+[0;32mI (60980) blynk_led_driver: button_released![0m
+
+[0;32mI (61080) blynk_led_driver: button_released![0m
+
+[0;32mI (61180) blynk_led_driver: button_released![0m
+
+[0;32mI (61270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (61280) blynk_led_driver: button_released![0m
+
+[0;32mI (61380) blynk_led_driver: button_released![0m
+
+[0;32mI (61480) blynk_led_driver: button_released![0m
+
+[0;32mI (61580) blynk_led_driver: button_released![0m
+
+[0;32mI (61680) blynk_led_driver: button_released![0m
+
+[0;32mI (61780) blynk_led_driver: button_released![0m
+
+[0;32mI (61880) blynk_led_driver: button_released![0m
+
+[0;32mI (61980) blynk_led_driver: button_released![0m
+
+[0;32mI (62080) blynk_led_driver: button_released![0m
+
+[0;32mI (62180) blynk_led_driver: button_released![0m
+
+[0;32mI (62270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (62280) blynk_led_driver: button_released![0m
+
+[0;32mI (62380) blynk_led_driver: button_released![0m
+
+[0;32mI (62480) blynk_led_driver: button_released![0m
+
+[0;32mI (62580) blynk_led_driver: button_released![0m
+
+[0;32mI (62680) blynk_led_driver: button_released![0m
+
+[0;32mI (62780) blynk_led_driver: button_released![0m
+
+[0;32mI (62880) blynk_led_driver: button_released![0m
+
+[0;32mI (62980) blynk_led_driver: button_released![0m
+
+[0;32mI (63080) blynk_led_driver: button_released![0m
+
+[0;32mI (63180) blynk_led_driver: button_released![0m
+
+[0;32mI (63270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (63280) blynk_led_driver: button_released![0m
+
+[0;32mI (63380) blynk_led_driver: button_released![0m
+
+[0;32mI (63480) blynk_led_driver: button_released![0m
+
+[0;32mI (63580) blynk_led_driver: button_released![0m
+
+[0;32mI (63680) blynk_led_driver: button_released![0m
+
+[0;32mI (63780) blynk_led_driver: button_released![0m
+
+[0;32mI (63880) blynk_led_driver: button_released![0m
+
+[0;32mI (63980) blynk_led_driver: button_released![0m
+
+[0;32mI (64080) blynk_led_driver: button_released![0m
+
+[0;32mI (64180) blynk_led_driver: button_released![0m
+
+[0;32mI (64270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (64280) blynk_led_driver: button_released![0m
+
+[0;32mI (64380) blynk_led_driver: button_released![0m
+
+[0;32mI (64480) blynk_led_driver: button_released![0m
+
+[0;32mI (64580) blynk_led_driver: button_released![0m
+
+[0;32mI (64680) blynk_led_driver: button_released![0m
+
+[0;32mI (64780) blynk_led_driver: button_released![0m
+
+[0;32mI (64880) blynk_led_driver: button_released![0m
+
+[0;32mI (64980) blynk_led_driver: button_released![0m
+
+[0;32mI (65080) blynk_led_driver: button_released![0m
+
+[0;32mI (65180) blynk_led_driver: button_released![0m
+
+[0;32mI (65270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (65280) blynk_led_driver: button_released![0m
+
+[0;32mI (65380) blynk_led_driver: button_released![0m
+
+[0;32mI (65480) blynk_led_driver: button_released![0m
+
+[0;32mI (65580) blynk_led_driver: button_released![0m
+
+[0;32mI (65680) blynk_led_driver: button_released![0m
+
+[0;32mI (65780) blynk_led_driver: button_released![0m
+
+[0;32mI (65880) blynk_led_driver: button_released![0m
+
+[0;32mI (65980) blynk_led_driver: button_released![0m
+
+[0;32mI (66080) blynk_led_driver: button_released![0m
+
+[0;32mI (66180) blynk_led_driver: button_released![0m
+
+[0;32mI (66270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (66280) blynk_led_driver: button_released![0m
+
+[0;32mI (66380) blynk_led_driver: button_released![0m
+
+[0;32mI (66480) blynk_led_driver: button_released![0m
+
+[0;32mI (66580) blynk_led_driver: button_released![0m
+
+[0;32mI (66680) blynk_led_driver: button_released![0m
+
+[0;32mI (66780) blynk_led_driver: button_released![0m
+
+[0;32mI (66880) blynk_led_driver: button_released![0m
+
+[0;32mI (66980) blynk_led_driver: button_released![0m
+
+[0;32mI (67080) blynk_led_driver: button_released![0m
+
+[0;32mI (67180) blynk_led_driver: button_released![0m
+
+[0;32mI (67270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (67280) blynk_led_driver: button_released![0m
+
+[0;32mI (67380) blynk_led_driver: button_released![0m
+
+[0;32mI (67480) blynk_led_driver: button_released![0m
+
+[0;32mI (67580) blynk_led_driver: button_released![0m
+
+[0;32mI (67680) blynk_led_driver: button_released![0m
+
+[0;32mI (67780) blynk_led_driver: button_released![0m
+
+[0;32mI (67880) blynk_led_driver: button_released![0m
+
+[0;32mI (67980) blynk_led_driver: button_released![0m
+
+[0;32mI (68080) blynk_led_driver: button_released![0m
+
+[0;32mI (68180) blynk_led_driver: button_released![0m
+
+[0;32mI (68270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (68280) blynk_led_driver: button_released![0m
+
+[0;32mI (68380) blynk_led_driver: button_released![0m
+
+[0;32mI (68480) blynk_led_driver: button_released![0m
+
+[0;32mI (68580) blynk_led_driver: button_released![0m
+
+[0;32mI (68680) blynk_led_driver: button_released![0m
+
+[0;32mI (68780) blynk_led_driver: button_released![0m
+
+[0;32mI (68880) blynk_led_driver: button_released![0m
+
+[0;32mI (68980) blynk_led_driver: button_released![0m
+
+[0;32mI (69080) blynk_led_driver: button_released![0m
+
+[0;32mI (69180) blynk_led_driver: button_released![0m
+
+[0;32mI (69270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (69280) blynk_led_driver: button_released![0m
+
+[0;32mI (69380) blynk_led_driver: button_released![0m
+
+[0;32mI (69480) blynk_led_driver: button_released![0m
+
+[0;32mI (69580) blynk_led_driver: button_released![0m
+
+[0;32mI (69680) blynk_led_driver: button_released![0m
+
+[0;32mI (69780) blynk_led_driver: button_released![0m
+
+[0;32mI (69880) blynk_led_driver: button_released![0m
+
+[0;32mI (69980) blynk_led_driver: button_released![0m
+
+[0;32mI (70080) blynk_led_driver: button_released![0m
+
+[0;32mI (70180) blynk_led_driver: button_released![0m
+
+[0;32mI (70270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (70280) blynk_led_driver: button_released![0m
+
+[0;32mI (70380) blynk_led_driver: button_released![0m
+
+[0;32mI (70480) blynk_led_driver: button_released![0m
+
+[0;32mI (70580) blynk_led_driver: button_released![0m
+
+[0;32mI (70680) blynk_led_driver: button_released![0m
+
+[0;32mI (70780) blynk_led_driver: button_released![0m
+
+[0;32mI (70880) blynk_led_driver: button_released![0m
+
+[0;32mI (70980) blynk_led_driver: button_released![0m
+
+[0;32mI (71080) blynk_led_driver: button_released![0m
+
+[0;32mI (71180) blynk_led_driver: button_released![0m
+
+[0;32mI (71270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (71280) blynk_led_driver: button_released![0m
+
+[0;32mI (71380) blynk_led_driver: button_released![0m
+
+[0;32mI (71480) blynk_led_driver: button_released![0m
+
+[0;32mI (71580) blynk_led_driver: button_released![0m
+
+[0;32mI (71680) blynk_led_driver: button_released![0m
+
+[0;32mI (71780) blynk_led_driver: button_released![0m
+
+[0;32mI (71880) blynk_led_driver: button_released![0m
+
+[0;32mI (71980) blynk_led_driver: button_released![0m
+
+[0;32mI (72080) blynk_led_driver: button_released![0m
+
+[0;32mI (72180) blynk_led_driver: button_released![0m
+
+[0;32mI (72270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (72280) blynk_led_driver: button_released![0m
+
+[0;32mI (72380) blynk_led_driver: button_released![0m
+
+[0;32mI (72480) blynk_led_driver: button_released![0m
+
+[0;32mI (72580) blynk_led_driver: button_released![0m
+
+[0;32mI (72680) blynk_led_driver: button_released![0m
+
+[0;32mI (72780) blynk_led_driver: button_released![0m
+
+[0;32mI (72880) blynk_led_driver: button_released![0m
+
+[0;32mI (72980) blynk_led_driver: button_released![0m
+
+[0;32mI (73080) blynk_led_driver: button_released![0m
+
+[0;32mI (73180) blynk_led_driver: button_released![0m
+
+[0;32mI (73270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (73280) blynk_led_driver: button_released![0m
+
+[0;32mI (73380) blynk_led_driver: button_released![0m
+
+[0;32mI (73480) blynk_led_driver: button_released![0m
+
+[0;32mI (73580) blynk_led_driver: button_released![0m
+
+[0;32mI (73680) blynk_led_driver: button_released![0m
+
+[0;32mI (73780) blynk_led_driver: button_released![0m
+
+[0;32mI (73880) blynk_led_driver: button_released![0m
+
+[0;32mI (73980) blynk_led_driver: button_released![0m
+
+[0;32mI (74080) blynk_led_driver: button_released![0m
+
+[0;32mI (74180) blynk_led_driver: button_released![0m
+
+[0;32mI (74270) blynk_led_driver: Turning the LED OFF![0m
+[0;32mI (74280) blynk_led_driver: button_released![0m
+
+[0;32mI (74380) blynk_led_driver: button_released![0m
+
+[0;32mI (74480) blynk_led_driver: button_released![0m
+
+[0;32mI (74580) blynk_led_driver: button_released![0m
+
+[0;32mI (74680) blynk_led_driver: button_released![0m
+
+[0;32mI (74780) blynk_led_driver: button_released![0m
+
+[0;32mI (74880) blynk_led_driver: button_released![0m
+
+[0;32mI (74980) blynk_led_driver: button_released![0m
+

@@ -1,0 +1,9 @@
+Command: cmake -G Ninja -B /home/dhruv/softwares/esp-idf/examples/esp_driver_design/blink_driver/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/dhruv/.espressif/python_env/idf6.1_py3.14_env/bin/python -DESP_PLATFORM=1 -DIDF_TARGET=esp32 -DCCACHE_ENABLE=False /home/dhruv/softwares/esp-idf/examples/esp_driver_design/blink_driver
+Configuration Report               
+ ───────────────────────────────── 
+   Parser Version: 1               
+   Verbosity: default              
+   Defaults policy: sdkconfig      
+   Status: Finished successfully   
+                                   
+ ───────────────────────────────── 
