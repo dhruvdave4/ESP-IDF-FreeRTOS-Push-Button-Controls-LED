@@ -41,9 +41,7 @@ Push Button Task
 ## FreeRTOS APIs Used
 
 ```c
-xQueueCreate()
-xQueueSend()
-xQueueReceive()
+
 xTaskCreate()
 vTaskDelay()
 ```
